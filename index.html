@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상처입은 아이들은 어디로 가야할까</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="jquery.fullPage.js"></script>
+    <script src="main.js" defer ></script>
+
+<!-- 구글차트1 -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['원가정 보호',     25206],
+      ['분리조치',      3669],
+      ['분리보호 후 원가정 복귀',  989],
+    ]);
+
+    var options = {
+//   title: 'Toppings I Like On My Pizza',
+  colors: ['#fccd03', '#d9d9d9', '#efefef'],
+  fontName:'NanumSquare',
+  legend:'none',
+  backgroundColor: 'transparent',
+//   pieSliceText: 'label',
+//   pieSliceText: 'none',
+pieSliceTextStyle:{color: 'white', fontSize: "40"},
+};
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
+</script>
+
+<!-- 구글차트2 -->
+<script type="text/javascript">
+    google.charts.load('current', {
+  callback: drawChart,
+  packages: ['corechart']
+});
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Category', '전국  쉼터의  수', 'Reference'],
+    ['2017', 57, 57],
+    ['2018', 65, 65],
+    ['2019', 73, 73],
+    ['2020', 72, 72]
+  ]);
+
+  var chartDiv = document.getElementById('chart_div');
+  var chart = new google.visualization.ColumnChart(chartDiv);
+  chart.draw(data, {
+    backgroundColor: 'transparent',
+    fontName:'NanumSquare',
+    colors: ['#d9d9d9', 'fccd03'],
+    legend: 'none',
+    series: {
+      1: {
+        type: 'line'
+      }
+    },
+    title: '전국 쉼터의 수',
+    titleTextStyle: {
+    color: '#d9d9d9'
+},
+    vAxis: {    gridlines: {
+        color: 'transparent'
+    },
+    textStyle:{color: '#d9d9d9'},
+      viewWindow: {
+        min: 0,
+        max: 80
+      }
+    }
+  });
+}
+  </script>
+
+
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar_logo"> </a>
+        <ul class="navbar_menu">
+            <li><a href="#n3">또, 그곳으로</a></li>
+            <li><a href="#n6">겨우 7%</a></li>
+            <li><a href="#n8">예산은 어디서</a></li>
+            <li><a href="#n9">사람도 부족하다</a></li>
+            <li><a href="#n11">작지만, 큰 노력들</a></li>
+        </ul>
+
+        <a href="#" onclick="return false;"class="navbar_toggleBtn"></a>
+    </nav>
+<main id="fullpage">
+        <!-- 1.intro -->
+        <div class="section page1" id="n1">
+            <div class="dot"></div>
+            <div class="intro">
+            </div>
+        </div>
+    
+        <!-- 2.아동학대 심각성 -->
+        <div class="section page2" id="n2">
+                <div class="desc">
+                    지난 5월에 7개월된 C양도 재학대로 숨졌다. 보름 전 문 앞 유모차에 아이가 혼자 울고 있다며 이웃이 아동학대의심신고를 했지만 당시 경찰은 부모에게 재발 방지를 경고하는데 그쳤다. C양은 다시 방치됐고 10여일 후 라면상자에 담긴 시신으로 조부에 의해 발견됐다.
+                    <div style="opacity: 0.4; text-align: right; margin-top: 7%;">-2019년 11월 19일 이데일리뉴스</div>
+                </div>
+
+    
+            </div>
+    
+            
+            </div>
+    
+        </div>
+    
+            <!-- 3.또, 그곳으로 -->
+        <div class="section page3" id="n3" >
+            <div class="wrapper">
+                <div class="desc">
+                    <span class="subtitle">
+                        또, 그곳으로</span>
+                    <br>
+                    아동학대 조치 사항을 보면 학대를 받은 아동이 가정으로부터 완전히 분리되는 경우는 약 15.6%밖에 되지 않아. 나머지 84.4%는 다시 학대받은 그곳으로 돌아가게 된다는 거지. 이런 아이들을 보호하기 위해서  <span class="highlight">학대피해아동쉼터</span> 가 필요해.
+                </div>
+                    <div id="donutchart" class="g_chart_1"></div>
+            </div>
+        </div>
+    
+        <!-- 4.그게뭔데?-->
+        <div class="section page4" id="n4">
+            <div class="wrapper_4">
+                        <div class="desc">
+                            학대피해아동쉼터, 그게 뭔데?
+                            <div class="hover_icon"></div>
+                        </div>
+                        <div class="desc_hide">
+                            처음 아동학대 신고가 들어오면 경찰과 지자체 전담공무원은 함께 조사에 나서는데, 긴급 분리가 필요하다는 판단이 내려진 아동은 단기보호시설로 입소해야 해. 주로 복지부와 지방자치단체에서 운영하는 학대피해아동쉽터 가 대표적이지. 즉 학대피해아동쉼터는 학대당한 아이들을 원 보호자로 부터 격리해야 할지에 대한 법원의 판단이 내려지기 전까지 <span class="highlight">임시로 아이들을 보호하고 치유하는 공간이야.</span>
+                        </div>
+                    </div>
+                </div>
+    <!-- 5 쉼터의 수 증가 -->
+        <div class="section page5" id="n5" >
+            <div class="wrapper">
+                <div id="chart_div" class="g_chart_2"></div>
+                <div class="desc">
+                    이렇게 학대피해아동들에게 중요한 쉼터는 2017년 57개, 2018년 65개, 2019년 73개 그리고 2020년 72개로 과거와 비교했을 때 그 수가 늘어났어. 
+                    <span class="highlight">하지만... </span> 
+                </div>
+    
+            </div>
+        </div>
+     
+        <!-- 6.겨우7% -->
+        <div class="section page6" id="n6" >
+            <div class="wrapper_6">
+                <div class="graph"> </div>
+                <div class="desc" >
+                    <span class="subtitle">겨우 7%...</span><br>
+                    쉼터 72곳이 수용할 수 있는 인원은 약 500명이야.
+                    부모로 부터의 분리를 유지할 수 있었던 경우는 정원 초과 문제로 인해,  전체 피해아동 중  약 7% 에 불과해. 이것은 쉼터가 <span class="highlight">너무 부족</span>하다는 말이지. 아이들은 아직 마음 편히 쉴수 없어.
+                </div>    
+                
+            </div>
+        </div>
+    
+        <!-- 7.쉼터가 왜  부족할까 -->
+        <div class="section page7" id="n7">
+            <div class="back">
+                <div class="desc">
+                    왜 아이들을 위한 쉼터가 계속 모자란걸까.
+                </div>
+            </div>
+        </div>
+    
+            <!-- 8.예산은 어디서 -->
+            <div class="section page8" id="n8" >
+                <div class="wrapper">
+                    <div class="graph"></div>
+                    <div class="desc">
+                        <span class="subtitle">예산은 어디서</span><br>
+                        2021년 총 아동학대 예산 416억 중 약 90퍼센트가 기금에 의존하는데, 대부분을 차지하는 '벌금 수납액'이 사회봉사 등의 대안으로 인해 <span class="highlight">늘어나기 힘든 구조</span>야. 특히 쉼터를 짓는 예산이 나오는 '복권 기금'은 그중 몇 퍼센트를 아동학대 피해사업에 써야 한다라는 기준이 없어. 또한 이 예산은 서울 부동산 가격에 못미치기 때문에, 집을 구하기가 많이 어렵다고 해.
+                    </div>
+    
+                </div>
+            </div>
+    
+        <!-- 9.사람도 부족하다 -->
+        <div class="section page9" id="n9" >
+            <div class="wrapper">
+       
+                <div class="desc">
+                    <span class="subtitle">사람도 부족하다</span><br>
+                    보건복지부의 아동학대전담공무원 배치 기준은 연간 아동학대 의심사례 신고접수 50건당 1인인데, 현실은 이 기준에 미치지 못해. 최소한의 기준을 지키지 못할정도로 <spna class="highlight">전담 공무원의 수가 부족</spna>하다는 의미로 볼 수 있어. 2021년 그 수가 늘어나지만 그래도 많이 부족한 노동력이야. 
+                </div>        
+                <div class="graph"></div>  
+            </div>
+        </div>
+        
+    
+    
+    
+        <!-- 10.결론 -->
+        <div class="section page10" id="n10">
+            <div class="back">
+                <div class="desc">
+                    학대피해아동, 그 중에서도 긴급한 보호가 필요한 아이들을 위해 쉼터는 매우 중요한 공간이야. 하지만 이를 위한 예산의 확충과 전담 공무원들의 처우 개선 은 아직 미흡하게 실행되고 있어. 
+                </div>
+            </div>
+        </div>
+    <!-- 11.작지만 큰 노력들 -->
+        <div class="section page11" id="n11">
+            <div class="container">
+                <div class="circle">
+                    <div class="desc">
+                        작지만, 큰 노력들
+                        <div class="hover_icon"></div>
+                    </div>
+                    <div class="desc_hide">
+                        분리조치된 학대피해아동의 온전한 보호를 위해 정부의 지원이 절실하고 아동학대 예방을 위한 개인적 차원의 관심과 노력도 필요해 . 어떤 방법이 있는지 알아볼까?
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 12.방안 -->
+        <div class="section page12">
+            <div class="suggetions">
+    
+                <div class="suggetion">
+                    <a  href="https://www.ncrc.or.kr/ncrc/main.do" target="_blank" class="box"id="box1"></a>
+                    <div class="desc" >
+                       <span class="bold">아동권리보장원</span>은 아동복지 관련 사업과 정책을 지원하고 평가하는 곳이야. 아동학대에 대한 주요 통계자료나 연구 자료를 확인할 수 있고 아동학대 예방 교육 영상과 같은 다양한 교육, 홍보 자료들을 얻을 수 있어.
+                    </div>
+                          </div>
+    
+                <div class="suggetion">
+                    <a href="https://www.sc.or.kr/sign4child/" target="_blank" class="box" id="box2"></a>
+                    <div class="desc">
+                        <Span class="bold">세이브더칠드런</Span>은 전 세계 아동의 권리를 위해 활동하는 단체야.
+                        이곳에서 국내 아동학대 정책개선을 위한 캠페인에 참여할 수 있는데, 이 캠페인에 참여하게 된다면 관련 소식을 계속 받아볼 수 도 있다고 해. 
+                    </div>
+                          </div>
+    
+                <div class="suggetion">
+                    <a href="https://www.sc.or.kr/wishlist2/giftShopView.do?TOP_ID=wishcate&INTSEQ=960&STRGUBUN=01" target="_blank" class="box" id="box3"></a>
+                    <div class="desc">
+                        세이브더칠드런의 <span class="bold">아동을 살리는 선물가게</span>는 국내 아동부터 지구 건너편의 아동에 대한 다양한 후원을 할 수 있는 곳이야. 이곳에서는 국내 학대피해아동 쉼터를 위한 지원비를 보낼 수 도 있어.
+                    </div>
+                          </div>
+            </div>
+            
+            </div>
+    
+            <!-- 13.마무리 -->
+            <div class="section page13">
+                <div class="desc">
+                    이제는 모든 아이들이 안심하고 쉴 수 있기를
+                </div> 
+            </div>
+
+            <!-- 14.출처 -->
+            <div class="section page14">
+                <div class="wrapper">
+                    <div class="desc">
+                        <span class="bold">1.뉴스</span>
+                        <br>
+                        <a href="https://www.edaily.co.kr/news/read?newsId=02423926622687360&mediaCodeNo=257&OutLnkChk=Y"  target="_blank" id="article">
+                            이지현, "학대한 부모 곁으로 다시…위험에 노출된 아동만 2000명", <이데일리뉴스>, 2019.11.19</a>
+                       
+                        <br>
+                        <spna class="bold">2.또, 그곳으로</spna>
+                        <br>
+                        <a href="https://newsis.com/view/?id=NISX20210219_0001344621" target="_blank">
+                            류난영, "코로나로 가정내 아동학대 무방비…5년간 160명 숨져", <뉴시스>, 2021.02.19</a>
+                        <br>
+                       <span class="bold">3.전국 쉼터의 수</span> <br>
+                       <a href="https://news.kbs.co.kr/news/view.do?ncd=4476058" target="_blank">
+                        신지수, "턱없이 부족한 아동학대 ‘쉼터’…지자체는 신규 설치 포기?", <KBS>, 2020.06.02</a>
+
+                        <br>
+                       <spna class="bold">4.겨우 7%...</spna>
+                        <br>
+                        <a href="https://www.sideview.co.kr/news/articleView.html?idxno=4522" target="_blank">
+                            윤진욱, "1년 내내 꽉 차는 학대아동 쉼터, 아이들은 어디로" <사이드뷰>, 2020.06.12
+                        </a>
+                        <br> 
+                        <span class="bold">5.예산은 어디서</span><br>
+                        <a href="https://www.hankyung.com/economy/article/202101122158i" target="_blank">
+                            구은서, "아동학대 예산 뜯어보니…'정인이 사건' 반복될 만 했다", <한국경제>, 2021.01.12<br>
+                            </a>
+                            <a href="https://newstapa.org/article/7g86G" target="_blank">
+                                김새봄, "‘라면형제’로 불린 사건_110일의 기록", <뉴스타파>, 2021.03.02
+                            </a>
+                        <br>
+                        <span class="bold">6.사람도 부족하다</span><br>
+                        <a href="https://www.nocutnews.co.kr/news/5458681" target="_blank">
+                            박초롱·김정훈·김승모 기자, 이의선·최세훈 인턴기자, ""내가 죄지었냐고!"…아동학대 전담 공무원의 하루", <노컷뉴스>, 2020.12.03</a>
+                        <br>
+                        <a href="https://www.jeonmin.co.kr/news/articleView.html?idxno=324406" target="_blank">
+                            홍민희, "아동학대 전담공무원제도 실효성 의문
+                            ", <전민일보>, 2021.01.11</a>
+                    </div>
+                </div>
+
+            </div>
+</main>
+        
+  
+    
+</body>
+</html>
